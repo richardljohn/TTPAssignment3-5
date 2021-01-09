@@ -3,7 +3,7 @@ const B1 = document.getElementById("Button1");
 const B2 = document.getElementById("Button2");
 
 Button1.onclick = function() { 
-    message.innerText = "I'm Right.";
+    message.innerText = "I'm right.";
     console.log(message);
 }
 
@@ -12,25 +12,30 @@ Button2.onclick = function(){
     console.log(message);
 }
 
+
+
 //Question #2
 
 const doNot = document.getElementById("Don't Hover");
 
 function warn(){
-    alert("I TOLD YOU NOT TO HOVER OVER ME!");
+    alert("Hey, I told you not to hover over me!");
 }
 
-//Question #3
+//Question #4
 
-const B3 = document.getElementById("account");
-const pass = document.getElementById("password")
-
-B3.onclick = function() {
-    if(pass.innerText === "12345678"){
-        valid.innerText = "Welcome!";
-        console.log(valid);
+function check() {
+    let user = document.forms["User"]["userID"].value;
+    let pass = document.forms["User"]["password"].value;
+    if(pass != "12345678"){
+        alert("Permission Denied.");
+        outMessage.innerText = "Permission Denied."; 
+        console.log(outMessage);
     }
     else {
-        alert("Incorrect Password!");
+        alert("Permission Granted.");
+        outMessage.innerTest = "Permission Granted."
+        console.log(outMessage);
     }
 }
+
