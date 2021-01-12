@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    /* background-color: aquamarine; */
+}
+
+tr {
+    height: 100px;
+    width: 200px
+}
+
+td { 
+    height: 50px;
+    width: 100px; 
+}
