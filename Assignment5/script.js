@@ -18,6 +18,19 @@ function addRow() {
     table.appendChild(newRow);
 }
 
+function addColumn(){
+    const allRows = document.querySelectorAll("tr");
+    for(let r = 0; r < allRows.length; r++){
+        if(r === 0){
+            const newRow = document.createElement("th");
+            allRows[r].appendChild(newRow);
+        } else {
+            const newRow = document.createElement("td");
+            allRows[r].appendChild(newRow);
+        }
+    }
+}
+
 const removeRowButt = document.getElementById("removeRow");
 
 function removeRow() {
@@ -26,10 +39,14 @@ function removeRow() {
     lastRow.remove();
 }
 
+function removeColumn() { 
+
+}
+
 function addColor(value) {
     //console.log(value);
     const allCells = document.querySelectorAll("td");
-    allCells[0].style.backgroundColor = value;
+    // allCells[0].style.backgroundColor = value;
 }
 
 function colorAll(value) {
@@ -51,5 +68,7 @@ function addColorToCurrentCell(currentCell) {
 
 function clear() { 
     allCells = document.querySelectorAll("td");
-    allCells.style.backgroundColor = "white";
+    for(let i = 0; i < allCells.length; i++){
+        allCells[i].style.backgroundColor = "white";
+    }
 }
