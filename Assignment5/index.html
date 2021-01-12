@@ -1,41 +1,43 @@
-<style>
-  table, th, td {
-    border: 1px solid black;
-    /* background-color: aquamarine; */
-  }
-  </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div>
-  <table class = "Table" id = "Table">
+  <table class = "table" id = "table">
     <tr>
-      <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-      <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+      <th id = "cell-1" onclick = "addColorToCurrentCell(this.id)"></th>
+      <th id = "cell-2" onclick = "addColorToCurrentCell(this.id)"></th></th>
     </tr>
     <tr>
-      <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-      <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+      <td id = "cell-3" onclick = "addColorToCurrentCell(this.id)"></td></td>
+      <td id = "cell-4" onclick = "addColorToCurrentCell(this.id)"></td></td>
     </tr>
     <tr>
-      <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-      <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+      <td id = "cell-5" onclick = "addColorToCurrentCell(this.id)"></td></td>
+      <td id = "cell-6" onclick = "addColorToCurrentCell(this.id)"></td></td>
     </tr>
   </table>
 </div>
-<div>
-  <button>Add A Row</button>
-  <button>Add A Column</button> <br>
-  <button>Remove A Row</button>
-  <button>Remove A Column</button> <br>
-  <button>Remove A Row</button>
-  <button>Color</button>
-  <button>Clear</button>
+<div> <br>
+  <button onclick = "addRow()" id = "addRow">Add A Row</button>
+  <button id = "addColumn">Add A Column</button> <br>
+  <button onclick = "removeRow()" id = "removeRow">Remove A Row</button>
+  <button id = "removeColumn">Remove A Column</button> <br>
+  <select onchange = "addColor(this.value)" id = "color">
+    <option value=""></option>
+    <option value="white">White</option>
+    <option value ="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="purple">Purple</option>
+  </select>
+  <button onclick = "colorAll(document.getElementById('color').value)" id = "colorAll">Color All</button>
+  <button onclick = "clear()" id = "Clear">Clear</button>
+
 
 </div>
     <div class="footer">
