@@ -26,7 +26,7 @@
   <button onclick = "addRow()" id = "addRow">Add A Row</button>
   <button onclick = "addColumn()" id = "addColumn">Add A Column</button> <br>
   <button onclick = "removeRow()" id = "removeRow">Remove A Row</button>
-  <button id = "removeColumn">Remove A Column</button> <br>
+  <button onclick = "removeColumn()" id = "removeColumn">Remove A Column</button> <br>
   <select onchange = "addColor(this.value)" id = "color">
     <option value=""></option>
     <option value="white">White</option>
@@ -36,7 +36,7 @@
     <option value="purple">Purple</option>
   </select>
   <button onclick = "colorAll(document.getElementById('color').value)" id = "colorAll">Color All</button>
-  <button onclick = "clear()" id = "Clear">Clear</button>
+  <button onclick = "colorAll('white')" id = "Clear">Clear</button>
 
 
 </div>
